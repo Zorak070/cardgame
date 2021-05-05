@@ -53,7 +53,7 @@
 }
 
 .image-blank {
-  /* background: url("./Components/Images/onepiece.png") !important; */
+  background: url("./Components/Images/pokeball.png") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;

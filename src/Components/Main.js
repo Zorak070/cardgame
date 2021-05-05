@@ -1,8 +1,8 @@
 import React from "react";
 import Start from "./Start";
-// import Game from "./Game";
+import Game from "./Game";
 import Nav from "./Nav";
-// import End from "./End";
+import End from "./End";
 
 class Main extends React.Component {
     state = {
@@ -28,9 +28,9 @@ class Main extends React.Component {
         return (
             <div>
                 {showStart ? <Start start={this.handleStart} /> : null}
-                {/* {showEnd ? <EndGame newGame={this.handleEndGame} /> : null} */}
+                {showEnd ? <End newGame={this.handleEndGame} /> : null}
                 {!showStart && <  Nav diff={diff} score={score} />}
-                {/* <Game endGame={this.handleEndGame} /> */}
+                {!showStart && <Game endGame={this.handleEndGame} />}
             </div>
         );
     }
