@@ -5,7 +5,7 @@ class Game extends React.Component {
     render() {
         return (
             <div className="game">
-                <Card endGame={this.props.endGame} />
+                <Card endGame={this.props.endGame} diff={this.props.diff} />
             </div>
         );
     }

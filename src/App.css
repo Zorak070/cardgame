@@ -26,7 +26,7 @@
 
 .game {
   display: flex;
-  height: 85vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -44,7 +44,7 @@
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  height: 120px;
+  height: 90px;
   width: 120px;
   border-radius: 5px;
   box-shadow: 2px 2px 3px black;
@@ -57,7 +57,7 @@
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  height: 120px;
+  height: 90px;
   width: 120px;
   border-radius: 5px;
   box-shadow: 2px 2px 3px black;

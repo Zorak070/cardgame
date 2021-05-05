@@ -4,11 +4,11 @@ import Vulpix from './vulpix.png';
 import Chikorita from './chikorita.png';
 import Eevee from './eevee.png';
 import Fox from './fenekkin.png';
-// import Munchlax from './munchlax.png';
-// import Sandshrew from './sandshrew.png';
+import Munchlax from './munchlax.png';
+import Sandshrew from './sandshrew.png';
 import Pokeball from './pokeball.png';
 
-export let images = [
+export let easy = [
     {
         name: "Charmander",
         pic: Charmander,
@@ -70,5 +70,29 @@ export let images = [
         flipped: false,
     }
 ];
+
+export let hard = [
+    ...easy,
+    {
+        name: "Munchlax",
+        pic: Munchlax,
+        flipped: false,
+    },
+    {
+        name: "Sandshrew",
+        pic: Sandshrew,
+        flipped: false,
+    },
+    {
+        name: "Munchlax",
+        pic: Munchlax,
+        flipped: false,
+    },
+    {
+        name: "Sandshrew",
+        pic: Sandshrew,
+        flipped: false,
+    }
+]
 
 export const blankCard = Pokeball;

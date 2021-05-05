@@ -1,5 +1,5 @@
 import React from "react";
-import { images } from "./Images/index";
+import { easy, hard } from "./Images/index";
 
 class Card extends React.Component {
     characters = [];
@@ -60,6 +60,7 @@ class Card extends React.Component {
     };
 
     render() {
+        let images = this.props.diff === "easy" ? easy : hard;
         return (
             <div className="images">
                 {images

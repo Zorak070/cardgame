@@ -54,7 +54,7 @@ class Main extends React.Component {
                 {showStart ? <Start start={this.handleStart} /> : null}
                 {showEnd ? <End newGame={this.handleEndGame} counter={this.state.counter} /> : null}
                 {!showStart && <  Nav diff={diff} score={score} />}
-                {!showStart && <Game endGame={this.handleEndGame} />}
+                {!showStart && <Game endGame={this.handleEndGame} diff={diff} />}
             </div>
         );
     }
