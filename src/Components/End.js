@@ -8,7 +8,7 @@ class EndGame extends React.Component {
         return (
             <div className="end-game">
                 <div className="message">
-                    <h2>Completed</h2>
+                    <h2>Completed in {this.props.counter} seconds</h2>
                     <button className="btn btn-primary" onClick={this.handleClick}>
                         Go Again
           </button>

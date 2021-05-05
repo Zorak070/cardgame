@@ -10,15 +10,25 @@ class Main extends React.Component {
         showEnd: false,
         score: 0,
         diff: "easy",
+        startTime: ""
     };
 
     handleStart = (diff, boolean) => {
         this.setState({ diff: diff, showStart: boolean });
+        this.startTimer();
     };
 
+    startTimer = () => {
+        const startTime = new Date();
+        this.setState({ startTime: startTime })
+    }
+
     handleEndGame = (boolean) => {
+        this.startTimer();
+
         if (boolean) {
-            this.setState({ showEnd: boolean, score: this.state.score + 1 });
+            const timeTaken = (new Date() - this.state.startTime) / 1000;
+            this.setState({ showEnd: boolean, score: this.state.score + 1, counter: timeTaken });
         } else {
             this.setState({ showEnd: boolean });
         }
@@ -28,7 +38,7 @@ class Main extends React.Component {
         return (
             <div>
                 {showStart ? <Start start={this.handleStart} /> : null}
-                {showEnd ? <End newGame={this.handleEndGame} /> : null}
+                {showEnd ? <End newGame={this.handleEndGame} counter={this.state.counter} /> : null}
                 {!showStart && <  Nav diff={diff} score={score} />}
                 {!showStart && <Game endGame={this.handleEndGame} />}
             </div>
