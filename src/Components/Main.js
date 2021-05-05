@@ -3,6 +3,7 @@ import Start from "./Start";
 import Game from "./Game";
 import Nav from "./Nav";
 import End from "./End";
+import axios from 'axios';
 
 class Main extends React.Component {
     state = {
@@ -25,14 +26,27 @@ class Main extends React.Component {
 
     handleEndGame = (boolean) => {
         this.startTimer();
-
         if (boolean) {
             const timeTaken = (new Date() - this.state.startTime) / 1000;
             this.setState({ showEnd: boolean, score: this.state.score + 1, counter: timeTaken });
+            this.submitToJson(this.state.diff, this.state.score, timeTaken);
         } else {
             this.setState({ showEnd: boolean });
         }
     };
+
+    submitToJson = (diff, score, time) => {
+        axios.post('http://localhost:3001/scores', {
+            diff: diff,
+            score: score,
+            timeTaken: time
+        }).then(resp => {
+            console.log(resp.data);
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
     render() {
         const { showStart, diff, score, showEnd } = this.state;
         return (

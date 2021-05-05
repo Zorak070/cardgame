@@ -64,9 +64,9 @@ class Card extends React.Component {
             <div className="images">
                 {images
                     .sort(() => Math.random() - 0.5)
-                    .map((element) => {
+                    .map((element, index) => {
                         return (
-                            <div
+                            <div key={index}
                                 className="image image-blank"
                                 name={element.name}
                                 style={{ background: `url(${element.pic})` }}

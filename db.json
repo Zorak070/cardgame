@@ -1,0 +1,22 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "diff": "easy",
+      "score": 1,
+      "timeTaken": 123
+    },
+    {
+      "diff": "easy",
+      "score": 1,
+      "timeTaken": 22.227,
+      "id": 2
+    },
+    {
+      "diff": "hard",
+      "score": 0,
+      "timeTaken": 17.571,
+      "id": 3
+    }
+  ]
+}
