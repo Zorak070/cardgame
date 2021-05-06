@@ -1,5 +1,6 @@
 Json server is hosted in the  [http://localhost:3001]
-Run npx [**json-server --watch -p 3001 db.json**] to start the json server.
+
+Run [npx json-server --watch -p 3001 db.json] to start the json server.
 
 # Getting Started with Create React App
 
