@@ -12,62 +12,32 @@ export let easy = [
     {
         name: "Charmander",
         pic: Charmander,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Eevee",
         pic: Eevee,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Chikorita",
         pic: Chikorita,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Fox",
         pic: Fox,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Vulpix",
         pic: Vulpix,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Squirtle",
         pic: Squirtle,
-        flipped: false,
-    },
-    {
-        name: "Charmander",
-        pic: Charmander,
-        flipped: false,
-    },
-    {
-        name: "Eevee",
-        pic: Eevee,
-        flipped: false,
-    },
-    {
-        name: "Chikorita",
-        pic: Chikorita,
-        flipped: false,
-    },
-    {
-        name: "Fox",
-        pic: Fox,
-        flipped: false,
-    },
-    {
-        name: "Vulpix",
-        pic: Vulpix,
-        flipped: false,
-    },
-    {
-        name: "Squirtle",
-        pic: Squirtle,
-        flipped: false,
+        flipped: "false",
     }
 ];
 
@@ -76,22 +46,12 @@ export let hard = [
     {
         name: "Munchlax",
         pic: Munchlax,
-        flipped: false,
+        flipped: "false",
     },
     {
         name: "Sandshrew",
         pic: Sandshrew,
-        flipped: false,
-    },
-    {
-        name: "Munchlax",
-        pic: Munchlax,
-        flipped: false,
-    },
-    {
-        name: "Sandshrew",
-        pic: Sandshrew,
-        flipped: false,
+        flipped: "false",
     }
 ]
 

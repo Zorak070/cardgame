@@ -4,6 +4,7 @@ import Game from "./Game";
 import Nav from "./Nav";
 import End from "./End";
 import axios from 'axios';
+import { easy, hard } from "./Images/index";
 
 class Main extends React.Component {
     state = {
@@ -49,12 +50,21 @@ class Main extends React.Component {
 
     render() {
         const { showStart, diff, score, showEnd } = this.state;
+        const images = diff === "easy" ? easy : hard;
+        const boardImage = images.concat(images)
+            .sort(() => Math.random() - 0.5)
+            .map(f => {
+                return {
+                    content: f,
+                    faceUp: false,
+                }
+            });
         return (
             <div>
                 {showStart ? <Start start={this.handleStart} /> : null}
                 {showEnd ? <End newGame={this.handleEndGame} counter={this.state.counter} /> : null}
                 {!showStart && <  Nav diff={diff} score={score} />}
-                {!showStart && <Game endGame={this.handleEndGame} diff={diff} />}
+                {!showStart && <Game endGame={this.handleEndGame} diff={diff} boardImage={boardImage} />}
             </div>
         );
     }
